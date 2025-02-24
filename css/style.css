@@ -1,0 +1,323 @@
+/* General Styling */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #302e22;
+  background: #ffffff;
+  cursor: default;
+  
+  
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; 
+    
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    color: #ff5b00;
+    justify-self: center;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1;
+}
+
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.65;
+    margin-top: 15px;
+}
+
+/* Transition */
+
+
+
+a, .button {
+    transition: all 350ms ease;
+}
+
+/* Nav Styling */
+
+/* Make nav containers flex */
+nav, .nav-links {
+    display: flex;
+}
+
+/* -- space around to hav space around each container
+-- vh to control how much nav occupies the screen*/
+nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    margin:1rem 5rem 1rem 5rem;
+}
+
+/* -- remove underline by list-style:none */
+.nav-links {
+    gap: 2em;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    
+}
+
+
+
+/* default cursor */
+.logo:hover {
+    cursor: default; 
+}
+
+/* links styling
+-- note the correct order for links styling
+-- hover is after visited so that even after the link has been visited, 
+it will still have the hover effect 
+-- active is last*/
+
+a {
+    text-decoration: none;
+    color: #ff5b00;
+}
+
+a:visited {
+    color: #848484;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+a:active {
+    color: #ff5b00;
+}
+
+/* Hero Section */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* Sections */
+
+section {
+    padding: 4vh;
+    box-sizing: border-box;
+    min-height: fit-content;
+    border-radius: 2rem;
+}
+
+.section-container {
+    display: grid;
+}
+
+
+
+.section-title {
+
+    text-align:center;
+    margin-bottom: 2rem;
+    color: #302e22;
+}
+
+
+
+
+#applications {
+
+    
+    border-radius: 2rem;
+    margin: 0;
+
+}
+
+.applications-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* space between cards */
+    margin: 0;
+    padding: 1rem;
+}
+  
+
+
+/* Applications Cards */
+.app-card {
+    background-color: #fbeae1;
+    padding: 2.5rem;
+    
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.card-buttons-container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+
+/* Buttons */
+
+.btn-container {
+    display: flex;
+    justify-content: justify;
+    gap: 1rem;
+}
+
+button {
+    font-weight: 600;
+    transition: all 350ms ease;
+    padding: 0.75rem;
+    width: 9rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+/* Project cards buttons */
+
+.card-buttons-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.button-app-info .button-app-github {
+    cursor: pointer;
+}
+
+.button-app-info {
+    background-color: #ff5b00;
+    color: #ffffff;
+    border-color: #ff5b00;
+}
+
+.button-app-info:hover {
+    cursor: pointer;
+    background-color: #ea5302;
+    color:#ffffff;
+    border: 2px solid #ea5302;
+}
+
+.button-app-github
+{
+    background-color: #ff0000;
+    color: #ffffff;
+    border-color: #ff0000;
+}
+.button-app-github:hover {
+    cursor: pointer;
+    border: 2px solid #b80000;
+    background-color: #b80000;
+    color:#ffffff;
+}
+
+
+
+
+/* Icons */
+#icon {
+    cursor: pointer;
+    height:2rem;
+}   
+
+
+/* footer */
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    text-align: center;
+    margin: 5rem auto 1rem 5rem;
+}
+
+#socials-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+#copyright-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+
+
+/* Media Queries */
+
+ /* when the screen is lower than 768px, 
+ hide desktop nav */
+ @media screen and (max-width: 768px) {    
+
+    .applications-container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+}
+
+
